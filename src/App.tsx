@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Nav navigate={navigate} />
+      <Nav page={page} navigate={navigate} />
       <main>
         {page === 'home' && <Landing navigate={navigate} />}
         {page === 'cv-generator' && <CVGenerator />}
@@ -27,7 +27,7 @@ function App() {
         {page === 'papers' && <Papers />}
         {page === 'uganda-paye-calculator' && <UgandaPayeCalculator />}
       </main>
-      <Footer />
+      <Footer navigate={navigate} />
     </>
   );
 }
