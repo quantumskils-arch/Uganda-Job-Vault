@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import Landing from './pages/Landing';
-import Papers from './pages/Papers';
 import CVGenerator from './pages/CVGenerator';
 import CVTemplates from './pages/CVTemplates';
-import Nav from './components/Nav';
+import Papers from './pages/Papers';
 import Footer from './components/Footer';
+import Nav from './components/Nav';
+import UgandaPayeCalculator from './pages/tools/uganda-paye-calculator';
 
-export type Page = 'home' | 'papers' | 'cv-generator' | 'cv-templates';
+export type Page = 'home' | 'cv-generator' | 'cv-templates' | 'papers' | 'uganda-paye-calculator';
 
-export default function App() {
+function App() {
   const [page, setPage] = useState<Page>('home');
 
   const navigate = (p: Page) => {
@@ -17,13 +18,18 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-white font-body">
-      <Nav page={page} navigate={navigate} />
-      {page === 'home' && <Landing navigate={navigate} />}
-      {page === 'papers' && <Papers />}
-      {page === 'cv-generator' && <CVGenerator />}
-      {page === 'cv-templates' && <CVTemplates />}
-      <Footer navigate={navigate} />
-    </div>
+    <>
+      <Nav navigate={navigate} />
+      <main>
+        {page === 'home' && <Landing navigate={navigate} />}
+        {page === 'cv-generator' && <CVGenerator />}
+        {page === 'cv-templates' && <CVTemplates />}
+        {page === 'papers' && <Papers />}
+        {page === 'uganda-paye-calculator' && <UgandaPayeCalculator />}
+      </main>
+      <Footer />
+    </>
   );
 }
+
+export default App;
