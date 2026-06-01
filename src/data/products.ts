@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'kcca-interview',
     title: 'KCCA Interview Questions — Complete Guide (2026)',
-    description: '35 real KCCA interview questions with model answers. All departments covered — Engineering, Revenue, Health, Finance. KCCA structure, Kampala city challenges, panel scoring criteria.',
+    description: '35 real KCCA interview questions with model answers. All departments covered — Engineering, Revenue, Health, Finance. KCCA structure, Kampala challenges, panel scoring.',
     price: 'UGX 12,000',
     priceUSD: '$3',
     selarLink: 'https://selar.com/0162121v98',
@@ -54,7 +54,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'ngo-cv',
     title: 'NGO CV Template Uganda — Premium Guide (USAID · UN · World Bank)',
-    description: 'The exact CV format that wins NGO jobs in Uganda. Full editable template, 25-term donor language glossary, ATS optimisation guide, before/after examples, and cover letter template.',
+    description: 'The exact CV format that wins NGO jobs in Uganda. Full editable template, 25-term donor language glossary, ATS guide, before/after examples, and cover letter template.',
     price: 'UGX 10,000',
     priceUSD: '$3',
     selarLink: 'https://selar.com/9h31ut8775',
@@ -62,12 +62,12 @@ export const PRODUCTS: Product[] = [
     badge: '⭐ Top Rated',
   },
   {
-    id: 'cover-letter',
+    id: 'cover-letters',
     title: 'Sample Cover Letters for Uganda Jobs — 10 Templates',
     description: '10 professionally written cover letters for NGO, government, bank, and private sector applications in Uganda. Edit and use immediately.',
     price: 'UGX 8,000',
     priceUSD: '$2',
-    selarLink: 'https://selar.com/4l25fn1k5s',
+    selarLink: 'https://selar.com/9h31ut8775',
     category: 'cv',
     badge: '🚧 Coming Soon',
   },
@@ -84,13 +84,12 @@ export const PRODUCTS: Product[] = [
   {
     id: 'free-checklist',
     title: 'FREE — Uganda Job Application Checklist (Instant Download)',
-    description: '7-point checklist used by successful Uganda job applicants. Covers application letter, CV, documents, interview prep, and follow-up. Free — no payment needed.',
+    description: '7-point checklist used by successful Uganda job applicants. Application letter, CV, documents, interview prep and follow-up. Free — share with friends.',
     price: 'FREE',
-    selarLink: 'https://selar.com/4l25fn1k5s',
+    selarLink: 'https://selar.com/651038o560',
     category: 'cv',
     free: true,
   },
 ];
 
-export const SELAR_STORE = 'https://selar.com/m/Quantum_wisdom?store=Uganda+Job+Vault';
-export const JOB_VAULT_STORE = 'https://selar.com/4l25fn1k5s';
+export const SELAR_STORE = 'https://selar.com/m/Quantum_wisdom';
