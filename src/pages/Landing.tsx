@@ -15,7 +15,7 @@ export default function Landing({ navigate }: LandingProps) {
     e.preventDefault();
     if (email) {
       setSubmitted(true);
-      window.open('https://selar.com/m/Quantum_wisdom', '_blank');
+      window.open('https://selar.com/4l25fn1k5s', '_blank');
     }
   };
 

@@ -52,7 +52,7 @@ export default function Nav({ page, navigate }: NavProps) {
         </div>
 
         <button
-          onClick={() => window.open('https://selar.com/m/Quantum_wisdom', '_blank')}
+          onClick={() => window.open('https://selar.com/4l25fn1k5s', '_blank')}
           className="hidden md:block bg-[#F5C518] text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-yellow-400 transition-colors"
         >
           Browse All →
@@ -85,7 +85,7 @@ export default function Nav({ page, navigate }: NavProps) {
             </button>
           ))}
           <button
-            onClick={() => window.open('https://selar.com/m/Quantum_wisdom', '_blank')}
+            onClick={() => window.open('https://selar.com/4l25fn1k5s', '_blank')}
             className="mt-2 bg-[#F5C518] text-black px-4 py-3 rounded-lg text-sm font-bold"
           >
             Browse All Products →
