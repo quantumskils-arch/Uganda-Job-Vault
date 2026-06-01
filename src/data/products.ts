@@ -77,7 +77,7 @@ export const PRODUCTS: Product[] = [
     description: 'Full guide to Stanbic and DFCU graduate trainee programmes. Aptitude tests, 25 interview questions, assessment centre guide, inside tips from past trainees.',
     price: 'UGX 18,000',
     priceUSD: '$5',
-    selarLink: 'https://selar.com/4l25fn1k5s',
+    selarLink: 'https://selar.com/50c38630da',
     category: 'papers',
     badge: 'New',
   },
