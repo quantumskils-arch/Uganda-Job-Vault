@@ -17,7 +17,7 @@ export const PRODUCTS: Product[] = [
     description: '200+ real-style URA aptitude questions with full answers. Numerical Reasoning, Verbal Reasoning, Situational Judgement, Logical Reasoning + tips from candidates who passed.',
     price: 'UGX 15,000',
     priceUSD: '$4',
-    selarLink: 'https://selar.com/4l25fn1k5s',
+    selarLink: 'https://selar.com/m/ugandaJobVault',
     category: 'papers',
     badge: 'Best Seller',
   },
@@ -92,4 +92,4 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
-export const SELAR_STORE = 'https://selar.com/4l25fn1k5s';
+export const SELAR_STORE = 'https://selar.com/m/ugandaJobVault';

@@ -4,7 +4,7 @@ interface FooterProps {
   navigate: (p: Page) => void;
 }
 
-const JOB_VAULT_STORE = 'https://selar.com/4l25fn1k5s';
+const JOB_VAULT_STORE = 'https://selar.com/m/ugandaJobVault';
 
 export default function Footer({ navigate }: FooterProps) {
   return (
@@ -39,7 +39,7 @@ export default function Footer({ navigate }: FooterProps) {
             <div>
               <div className="text-white/40 text-xs uppercase tracking-widest mb-3">Popular</div>
               <ul className="space-y-2 text-sm">
-                <li><a href="https://selar.com/4l25fn1k5s" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition-colors">URA Aptitude Test</a></li>
+                <li><a href="https://selar.com/m/ugandaJobVault" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition-colors">URA Aptitude Test</a></li>
                 <li><a href="https://selar.com/872b89172a" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition-colors">UNRA Interview Guide</a></li>
                 <li><a href="https://selar.com/9h31ut8775" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition-colors">NGO CV Format</a></li>
                 <li><a href="https://selar.com/31g77v364b" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition-colors">Govt Interview Prep</a></li>
