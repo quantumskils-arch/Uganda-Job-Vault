@@ -8,6 +8,8 @@ export interface Product {
   category: 'papers' | 'cv' | 'interview' | 'bundle';
   badge?: string;
   free?: boolean;
+  coverImage?: string;
+  whatsInside?: string[];
 }
 
 export const PRODUCTS: Product[] = [
@@ -20,6 +22,14 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/m/ugandaJobVault',
     category: 'papers',
     badge: 'Best Seller',
+    coverImage: '/covers/ura-aptitude.png',
+    whatsInside: [
+      '200+ real-style aptitude questions',
+      'Full answers with explanations',
+      'Numerical, Verbal & Logical Reasoning',
+      'Situational Judgement section',
+      'Tips from candidates who passed',
+    ],
   },
   {
     id: 'govt-interview',
@@ -30,6 +40,14 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/31g77v364b',
     category: 'interview',
     badge: 'Hot Right Now',
+    coverImage: '/covers/govt-interview.png',
+    whatsInside: [
+      '20 PSC interview questions & model answers',
+      'Panel scoring breakdown',
+      'Dress code & CV format guide',
+      'Disqualification checklist',
+      'Instant PDF download',
+    ],
   },
   {
     id: 'unra-interview',
@@ -40,6 +58,14 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/872b89172a',
     category: 'interview',
     badge: 'New',
+    coverImage: '/covers/unra-interview.png',
+    whatsInside: [
+      '30 interview questions with model answers',
+      'Technical questions for Engineers & Procurement',
+      'UNRA structure & current projects brief',
+      'Panel scoring guide',
+      'Full day-of checklist',
+    ],
   },
   {
     id: 'kcca-interview',
@@ -50,6 +76,14 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/0162121v98',
     category: 'interview',
     badge: 'New',
+    coverImage: '/covers/kcca-interview.png',
+    whatsInside: [
+      '35 real interview questions & model answers',
+      'All departments: Engineering, Revenue, Health, Finance',
+      'KCCA structure & Kampala challenges overview',
+      'Panel scoring breakdown',
+      'Instant PDF download',
+    ],
   },
   {
     id: 'ngo-cv',
@@ -60,6 +94,14 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/9h31ut8775',
     category: 'cv',
     badge: 'Top Rated',
+    coverImage: '/covers/ngo-cv.png',
+    whatsInside: [
+      'Full editable CV template (Word & Google Docs)',
+      '25-term donor language glossary',
+      'ATS optimisation guide',
+      'Before & after CV examples',
+      'Cover letter template included',
+    ],
   },
   {
     id: 'cover-letters',
@@ -70,6 +112,14 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/82s8r8bq31',
     category: 'cv',
     badge: 'New',
+    coverImage: '/covers/cover-letters.png',
+    whatsInside: [
+      '10 professionally written cover letters',
+      'NGO, government, bank & private sector versions',
+      'Uganda job market–specific language',
+      'Fully editable (Word & Google Docs)',
+      'Instant download',
+    ],
   },
   {
     id: 'banking-pack',
@@ -80,6 +130,14 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/50c38630da',
     category: 'papers',
     badge: 'New',
+    coverImage: '/covers/banking-pack.png',
+    whatsInside: [
+      'Stanbic & DFCU aptitude test questions',
+      '25 interview questions with model answers',
+      'Assessment centre guide',
+      'Inside tips from past trainees',
+      'Instant PDF download',
+    ],
   },
   {
     id: 'psc-aptitude',
@@ -90,6 +148,14 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/8130888471',
     category: 'papers',
     badge: 'New',
+    coverImage: '/covers/psc-aptitude.png',
+    whatsInside: [
+      '90 questions across all 5 GRE test sections',
+      'Numerical, Verbal & Logical Reasoning',
+      'Situational Judgement & Uganda Current Affairs',
+      'Full explanation for every answer',
+      'Bonus: interview tips for after you pass',
+    ],
   },
   {
     id: 'free-checklist',
@@ -99,6 +165,14 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/651038o560',
     category: 'cv',
     free: true,
+    coverImage: '/covers/free-checklist.png',
+    whatsInside: [
+      'Application letter requirements',
+      'CV & supporting documents checklist',
+      'Interview preparation steps',
+      'Follow-up guide',
+      'Printable PDF — share freely',
+    ],
   },
 ];
 

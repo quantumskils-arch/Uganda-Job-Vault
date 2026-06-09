@@ -2,6 +2,7 @@ import { Page } from '../App';
 import { ArrowRight, Download, Users, Star, BookOpen, Zap, FileText, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { PRODUCTS, SELAR_STORE } from '../data/products';
+import ProductCard from '../components/ProductCard';
 
 interface LandingProps {
   navigate: (p: Page) => void;
@@ -207,30 +208,7 @@ export default function Landing({ navigate }: LandingProps) {
 
           <div className="grid md:grid-cols-3 gap-5">
             {featuredProducts.map((p) => (
-              <div
-                key={p.id}
-                className="border border-white/10 rounded-2xl p-5 bg-white/[0.02] flex flex-col gap-3 hover:border-[#F5C518]/30 transition-colors"
-              >
-                {p.badge && (
-                  <span className="text-xs font-bold text-[#F5C518] bg-[#F5C518]/10 px-3 py-1 rounded-full w-fit">
-                    {p.badge}
-                  </span>
-                )}
-                <h3 className="font-bold text-base leading-snug">{p.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed flex-1">{p.description}</p>
-                <div className="flex items-center justify-between pt-2">
-                  <div>
-                    <div className="font-black text-lg text-[#F5C518]">{p.price}</div>
-                    {p.priceUSD && <div className="text-white/30 text-xs">≈ {p.priceUSD}</div>}
-                  </div>
-                  <button
-                    onClick={() => window.open(p.selarLink, '_blank')}
-                    className="bg-[#F5C518] text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-yellow-400 transition-colors"
-                  >
-                    Buy Now
-                  </button>
-                </div>
-              </div>
+              <ProductCard key={p.id} product={p} />
             ))}
           </div>
 
