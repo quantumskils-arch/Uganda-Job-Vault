@@ -148,7 +148,7 @@ export const PRODUCTS: Product[] = [
     selarLink: 'https://selar.com/8130888471',
     category: 'papers',
     badge: 'New',
-    coverImage: '/covers/psc-aptitude.png',
+    coverImage: '/covers/psc-aptitude.jpg',
     whatsInside: [
       '90 questions across all 5 GRE test sections',
       'Numerical, Verbal & Logical Reasoning',
