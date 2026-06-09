@@ -64,12 +64,9 @@ export default function Landing({ navigate }: LandingProps) {
             >
               Browse Past Papers <ArrowRight size={18} />
             </button>
-            <button
-              onClick={() => navigate('cv-generator')}
-              className="border border-white/20 text-white px-8 py-4 rounded-xl font-semibold text-base hover:bg-white/5 transition-all flex items-center justify-center gap-2"
-            >
-              <Zap size={18} className="text-[#F5C518]" /> Try AI CV Generator
-            </button>
+            <div className="border border-white/10 text-white/30 px-8 py-4 rounded-xl font-semibold text-base flex items-center justify-center gap-2 cursor-not-allowed">
+              <Zap size={18} className="text-white/20" /> AI CV — Coming Soon
+            </div>
           </div>
 
           {/* Stats */}
@@ -163,9 +160,9 @@ export default function Landing({ navigate }: LandingProps) {
               step: '03',
               icon: <Zap size={24} />,
               title: 'Generate with AI',
-              desc: 'Our AI knows Ugandan HR language. Input your details, get a professional CV in 60 seconds.',
-              cta: 'Try AI CV',
-              page: 'cv-generator' as Page,
+              desc: 'AI CV generator powered by Groq — launching soon. Build your CV manually with our templates in the meantime.',
+              cta: null as string | null,
+              page: null as Page | null,
             },
           ].map((item) => (
             <div
@@ -178,12 +175,16 @@ export default function Landing({ navigate }: LandingProps) {
               <div className="text-[#F5C518] mb-4">{item.icon}</div>
               <h3 className="font-display font-bold text-lg mb-2">{item.title}</h3>
               <p className="text-white/50 text-sm leading-relaxed mb-4">{item.desc}</p>
-              <button
-                onClick={() => navigate(item.page)}
-                className="text-[#F5C518] text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all"
-              >
-                {item.cta} <ArrowRight size={14} />
-              </button>
+              {item.page ? (
+                <button
+                  onClick={() => navigate(item.page!)}
+                  className="text-[#F5C518] text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all"
+                >
+                  {item.cta} <ArrowRight size={14} />
+                </button>
+              ) : (
+                <span className="text-white/25 text-sm font-semibold">Coming Soon</span>
+              )}
             </div>
           ))}
         </div>

@@ -14,7 +14,6 @@ export default function Nav({ page, navigate }: NavProps) {
   const links: { label: string; page: Page; icon: JSX.Element }[] = [
     { label: 'Past Papers', page: 'papers', icon: <BookOpen size={15} /> },
     { label: 'CV Templates', page: 'cv-templates', icon: <FileText size={15} /> },
-    { label: 'AI CV Generator', page: 'cv-generator', icon: <Zap size={15} /> },
     { label: 'PAYE Calculator', page: 'uganda-paye-calculator', icon: <Calculator size={15} /> },
   ];
 
