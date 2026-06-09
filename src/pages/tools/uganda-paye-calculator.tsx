@@ -18,27 +18,24 @@ export default function UgandaPayeCalculator() {
   const selectedMode = MODES.find((m) => m.value === mode)!;
 
   const calculatePaye = () => {
-    const taxFreeThreshold = 335000; // UGX 335,000 tax-free
     const NSSF_EMPLOYEE_RATE = 0.05;
     const NSSF_EMPLOYER_RATE = 0.10;
 
-    let taxableIncome = Math.max(0, grossSalary - taxFreeThreshold);
+    // URA monthly resident PAYE schedule (in effect June 2026)
+    // 0 – 235,000:        0%
+    // 235,001 – 335,000:  10% of amount over 235,000          → max 10,000
+    // 335,001 – 410,000:  10,000 + 20% of amount over 335,000 → max 25,000
+    // 410,001 – 10M:      25,000 + 30% of amount over 410,000
+    // Above 10M:          as above + 10% surtax on amount over 10,000,000
     let payeTax = 0;
-
-    // PAYE Tax Bands (updated to reflect modern tax laws)
-    // 0 to 235,000 UGX -> 0%
-    // 235,001 to 335,000 UGX -> 10%
-    // 335,001 to 410,000 UGX -> 20%
-    // Above 410,000 UGX -> 30%
-
-    if (grossSalary > 235000) {
-      if (grossSalary <= 335000) {
-        payeTax = (grossSalary - 235000) * 0.10;
-      } else if (grossSalary <= 410000) {
-        payeTax = (335000 - 235000) * 0.10 + (grossSalary - 335000) * 0.20;
-      } else {
-        payeTax = (335000 - 235000) * 0.10 + (410000 - 335000) * 0.20 + (grossSalary - 410000) * 0.30;
-      }
+    if (grossSalary > 10000000) {
+      payeTax = 25000 + (grossSalary - 410000) * 0.30 + (grossSalary - 10000000) * 0.10;
+    } else if (grossSalary > 410000) {
+      payeTax = 25000 + (grossSalary - 410000) * 0.30;
+    } else if (grossSalary > 335000) {
+      payeTax = 10000 + (grossSalary - 335000) * 0.20;
+    } else if (grossSalary > 235000) {
+      payeTax = (grossSalary - 235000) * 0.10;
     }
 
     const nssfEmployeeDeduction = grossSalary * NSSF_EMPLOYEE_RATE;
