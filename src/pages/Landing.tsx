@@ -244,58 +244,55 @@ export default function Landing({ navigate }: LandingProps) {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="py-20 max-w-6xl mx-auto px-4">
-        <h2 className="font-display font-black text-3xl text-center mb-12">
-          Ugandans Who Got <span className="text-[#F5C518]">The Job</span>
+      {/* EARLY ACCESS SOCIAL PROOF */}
+      <section className="py-20 max-w-4xl mx-auto px-4 text-center">
+        <div className="inline-flex items-center gap-2 bg-[#F5C518]/10 border border-[#F5C518]/30 text-[#F5C518] text-xs font-bold px-4 py-2 rounded-full mb-8 uppercase tracking-widest">
+          <Star size={12} className="fill-[#F5C518]" /> Early Access — Limited Offer
+        </div>
+        <h2 className="font-display font-black text-3xl md:text-4xl mb-6">
+          Be Among the First.<br />
+          <span className="text-[#F5C518]">Get 50% Off & Share Your Story.</span>
         </h2>
-        <div className="grid md:grid-cols-3 gap-5">
+        <p className="text-white/60 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+          Uganda Job Vault just launched. Early buyers get 50% off all products — and when you land that job,
+          we'll feature your success story right here. Real results. Real Ugandans.
+        </p>
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           {[
             {
-              name: 'Nakato Brenda',
-              role: 'Now at USAID Uganda',
-              text: 'The NGO CV template changed everything. I got 3 interviews in one month after years of silence.',
-              stars: 5,
+              icon: '🎯',
+              title: 'Targeted Content',
+              desc: 'Every guide is built specifically for URA, PSC, UNRA, Stanbic, KCCA — not generic advice.',
             },
             {
-              name: 'Okello Patrick',
-              role: 'URA Tax Officer',
-              text: 'Passed the URA aptitude test first attempt. The past papers were almost identical to the real exam.',
-              stars: 5,
+              icon: '⚡',
+              title: 'Instant Download',
+              desc: 'Pay with MTN MoMo or Airtel Money and get your files immediately. No waiting, no account needed.',
             },
             {
-              name: 'Namukasa Joyce',
-              role: 'Stanbic Graduate Trainee',
-              text: 'The AI CV generator wrote better than I ever could. Interview panel actually mentioned my CV stood out.',
-              stars: 5,
+              icon: '🇺🇬',
+              title: 'Built for Uganda',
+              desc: 'Created by someone who studied every past paper so you don\'t have to. Local context, real results.',
             },
-          ].map((t) => (
+          ].map((card) => (
             <div
-              key={t.name}
-              className="border border-white/10 rounded-2xl p-6 bg-white/[0.02]"
+              key={card.title}
+              className="border border-white/10 rounded-2xl p-6 bg-white/[0.02] text-left"
             >
-              <div className="flex gap-0.5 mb-4">
-                {Array.from({ length: t.stars }).map((_, i) => (
-                  <Star key={i} size={14} className="text-[#F5C518] fill-[#F5C518]" />
-                ))}
-              </div>
-              <p className="text-white/70 text-sm leading-relaxed mb-4 italic">"{t.text}"</p>
-              <div>
-                <div className="font-bold text-sm">{t.name}</div>
-                <div className="text-white/40 text-xs">{t.role}</div>
-              </div>
+              <div className="text-3xl mb-3">{card.icon}</div>
+              <div className="font-bold text-sm mb-2">{card.title}</div>
+              <div className="text-white/50 text-sm leading-relaxed">{card.desc}</div>
             </div>
           ))}
         </div>
+        <p className="text-white/30 text-sm">
+          ✓ Secure checkout via Selar &nbsp;·&nbsp; ✓ Instant delivery &nbsp;·&nbsp; ✓ Used by job seekers across Uganda
+        </p>
       </section>
 
       {/* FINAL CTA */}
       <section className="py-16 border-t border-white/5">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 text-[#F5C518] text-sm mb-6">
-            <Users size={16} />
-            <span>2,400+ Ugandans already ahead of you</span>
-          </div>
           <h2 className="font-display font-black text-3xl md:text-4xl mb-4">
             Your next job starts here.
           </h2>

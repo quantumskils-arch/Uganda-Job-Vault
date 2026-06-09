@@ -82,6 +82,16 @@ export const PRODUCTS: Product[] = [
     badge: 'New',
   },
   {
+    id: 'psc-aptitude',
+    title: 'PSC Graduate Recruitment — Aptitude Practice Pack 2025/2026',
+    description: '90 practice questions across all 5 PSC GRE test sections: Numerical Reasoning, Verbal Reasoning, Logical Reasoning, Situational Judgement & Uganda Current Affairs. Every answer has a full explanation. Bonus: interview tips for after you pass.',
+    price: 'UGX 18,000',
+    priceUSD: '$5',
+    selarLink: 'https://selar.com/8130888471',
+    category: 'papers',
+    badge: 'New',
+  },
+  {
     id: 'free-checklist',
     title: 'FREE — Uganda Job Application Checklist (Instant Download)',
     description: '7-point checklist used by successful Uganda job applicants. Application letter, CV, documents, interview prep and follow-up. Free — share with friends.',
