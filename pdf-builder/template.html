@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>{{TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ============================================================
+     UGANDA JOB VAULT — Reusable Product PDF Template
+     Brand: #0A0A0A ink / #F5C518 gold / Bebas Neue + DM Sans
+     A4, print-optimized. Edit CSS here once; every product
+     poured through build.js inherits this look.
+     ============================================================ */
+
+  :root {
+    --ink:    #0A0A0A;   /* near-black body ink            */
+    --gold:   #F5C518;   /* brand accent                  */
+    --paper:  #FFFFFF;   /* content page background       */
+    --muted:  #4A4A4A;   /* secondary text                */
+    --hair:   #E4E4E4;   /* hairline rules                */
+    --tint:   #FBF7E6;   /* faint gold tint for callouts  */
+  }
+
+  * { box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 11.2pt;
+    line-height: 1.62;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ---------- COVER (full-dark dramatic, own page) ---------- */
+  .cover {
+    position: relative;
+    /* Bleed past the @page margins to fill the whole sheet */
+    margin: -18mm -16mm 0 -16mm;
+    padding: 46mm 20mm 30mm 20mm;
+    min-height: 297mm;
+    background: var(--ink);
+    color: #fff;
+    break-after: page;
+    overflow: hidden;
+  }
+  .cover::before {
+    /* gold glow accent, top-right, echoing the site hero */
+    content: "";
+    position: absolute;
+    top: -120mm; right: -90mm;
+    width: 260mm; height: 260mm;
+    background: radial-gradient(circle, rgba(245,197,24,0.16) 0%, rgba(245,197,24,0) 62%);
+  }
+  .cover-kicker {
+    position: relative;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 11pt;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 14mm 0;
+  }
+  .cover-title {
+    position: relative;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 64pt;
+    line-height: 0.94;
+    letter-spacing: 0.01em;
+    margin: 0;
+    color: #fff;
+  }
+  .cover-title .gold { color: var(--gold); }
+  .cover-rule {
+    position: relative;
+    width: 64mm; height: 3pt;
+    background: var(--gold);
+    margin: 12mm 0;
+  }
+  .cover-subtitle {
+    position: relative;
+    font-size: 14pt;
+    font-weight: 400;
+    color: #D8D8D8;
+    max-width: 130mm;
+    margin: 0;
+  }
+  .cover-foot {
+    position: absolute;
+    left: 20mm; bottom: 26mm; right: 20mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "DM Sans", sans-serif;
+  }
+  .brandmark {
+    display: flex; align-items: center; gap: 3.5mm;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 17pt;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+  .brandmark .diamond {
+    width: 4.5mm; height: 4.5mm;
+    background: var(--gold);
+    transform: rotate(45deg);
+    display: inline-block;
+  }
+  .cover-foot .edition {
+    font-size: 9.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ---------- CONTENT (white pages) ---------- */
+  .content { padding-top: 2mm; }
+
+  h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 30pt;
+    line-height: 1.04;
+    letter-spacing: 0.01em;
+    margin: 0 0 2mm 0;
+    padding-bottom: 3mm;
+    border-bottom: 2.5pt solid var(--gold);
+    break-after: avoid;
+  }
+  h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 21pt;
+    letter-spacing: 0.015em;
+    color: var(--ink);
+    margin: 11mm 0 3mm 0;
+    break-after: avoid;
+  }
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 3.2mm; height: 3.2mm;
+    background: var(--gold);
+    transform: rotate(45deg);
+    margin-right: 3.5mm;
+    vertical-align: middle;
+  }
+  h3 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 12.5pt;
+    letter-spacing: 0.01em;
+    margin: 7mm 0 2mm 0;
+    color: var(--ink);
+    break-after: avoid;
+  }
+
+  p { margin: 0 0 3.5mm 0; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); }
+
+  ul, ol { margin: 0 0 4mm 0; padding-left: 6mm; }
+  li { margin: 0 0 1.6mm 0; }
+  ul li::marker { color: var(--gold); }
+  ol li::marker { color: var(--gold); font-weight: 700; }
+
+  hr {
+    border: none;
+    border-top: 1pt solid var(--hair);
+    margin: 7mm 0;
+  }
+
+  blockquote {
+    margin: 4mm 0;
+    padding: 1mm 0 1mm 6mm;
+    border-left: 3pt solid var(--gold);
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4mm 0 6mm 0;
+    font-size: 10.5pt;
+  }
+  th {
+    background: var(--ink);
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    text-align: left;
+    padding: 2.4mm 3mm;
+    letter-spacing: 0.02em;
+  }
+  td { padding: 2.2mm 3mm; border-bottom: 1pt solid var(--hair); }
+  tr:nth-child(even) td { background: #FAFAFA; }
+
+  code {
+    font-family: "DM Sans", monospace;
+    background: #F2F2F2;
+    padding: 0.5mm 1.5mm;
+    border-radius: 2px;
+    font-size: 0.92em;
+  }
+
+  /* ---------- CALLOUT BOXES ---------- */
+  /* Authored in markdown as:  ::: tip Title  …text…  :::        */
+  .callout {
+    position: relative;
+    margin: 5mm 0;
+    padding: 4mm 5mm 4mm 6mm;
+    background: var(--tint);
+    border: 1pt solid #ECE2B8;
+    border-left: 3.5pt solid var(--gold);
+    border-radius: 3px;
+    break-inside: avoid;
+  }
+  .callout-title {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 10pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8A6D00;
+    margin: 0 0 2mm 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout.warn   { background: #FCF2F2; border-color: #F0D2D2; border-left-color: #C0392B; }
+  .callout.warn   .callout-title { color: #A03228; }
+  .callout.note   { background: #F4F6F8; border-color: #DCE3E9; border-left-color: var(--ink); }
+  .callout.note   .callout-title { color: var(--ink); }
+
+  /* Day header chip for the sprint plan */
+  .day {
+    display: inline-block;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 13pt;
+    letter-spacing: 0.05em;
+    background: var(--ink);
+    color: var(--gold);
+    padding: 1mm 4mm;
+    border-radius: 3px;
+    margin: 8mm 0 2mm 0;
+    break-after: avoid;   /* keep chip bound to the paragraph that follows */
+  }
+  /* Paragraph immediately after a day chip: prevent it opening a new page alone */
+  .day + p { break-before: avoid; }
+
+  /* ---------- PAGE-BREAK CONTROL ---------- */
+  /* Authored in markdown as a line:  <!-- pagebreak -->          */
+  .pagebreak { break-before: page; }
+  .avoid-break { break-inside: avoid; }
+  img { max-width: 100%; }
+</style>
+</head>
+<body>
+
+  <section class="cover">
+    <div class="cover-kicker">{{KICKER}}</div>
+    <h1 class="cover-title">{{COVER_TITLE}}</h1>
+    <div class="cover-rule"></div>
+    <p class="cover-subtitle">{{SUBTITLE}}</p>
+    <div class="cover-foot">
+      <div class="brandmark"><span class="diamond"></span>{{BRAND}}</div>
+      <div class="edition">{{EDITION}}</div>
+    </div>
+  </section>
+
+  <main class="content">
+    {{CONTENT}}
+  </main>
+
+</body>
+</html>
