@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ugandajobvault.vercel.app/sitemap.xml
