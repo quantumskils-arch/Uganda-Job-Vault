@@ -14,6 +14,24 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'aptitude-bundle',
+    title: 'Aptitude Test Mastery Bundle 2026 — PSC + URA',
+    description: 'Everything you need to pass the PSC and URA aptitude tests in one bundle. PSC pack (90 questions) + URA pack (200+ questions) + the bonus 14-Day Exam Sprint study plan. Save UGX 9,000.',
+    price: 'UGX 24,000',
+    priceUSD: '$7',
+    selarLink: 'https://selar.com/3135100177',
+    category: 'bundle',
+    badge: 'Best Value',
+    coverImage: '/covers/aptitude-bundle.png',
+    whatsInside: [
+      'PSC Aptitude Pack — 90 questions, all 5 GRE sections',
+      'URA Aptitude Pack — 200+ real-style questions',
+      'BONUS: 14-Day Exam Sprint study plan',
+      'Complete exam-day playbook',
+      'Save UGX 9,000 vs buying separately',
+    ],
+  },
+  {
     id: 'ura-aptitude',
     title: 'URA Aptitude Test — Past Questions & Answers (2026)',
     description: '200+ real-style URA aptitude questions with full answers. Numerical Reasoning, Verbal Reasoning, Situational Judgement, Logical Reasoning + tips from candidates who passed.',
