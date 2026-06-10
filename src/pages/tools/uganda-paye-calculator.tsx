@@ -29,7 +29,8 @@ export default function UgandaPayeCalculator() {
     // Above 10M:          as above + 10% surtax on amount over 10,000,000
     let payeTax = 0;
     if (grossSalary > 10000000) {
-      payeTax = 25000 + (grossSalary - 410000) * 0.30 + (grossSalary - 10000000) * 0.10;
+      // 2,902,000 = tax at the 10M ceiling = 25,000 + 30% × (10,000,000 − 410,000)
+      payeTax = 2902000 + (grossSalary - 10000000) * 0.10;
     } else if (grossSalary > 410000) {
       payeTax = 25000 + (grossSalary - 410000) * 0.30;
     } else if (grossSalary > 335000) {
