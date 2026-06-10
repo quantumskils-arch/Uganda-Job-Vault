@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ExternalLink, Download, Check, BookOpen, FileText, Users, Package } from 'lucide-react';
 import { Product } from '../data/products';
 
@@ -15,10 +16,8 @@ export default function ProductCard({ product: p }: { product: Product }) {
   const showPlaceholder = !p.coverImage || imgFailed;
 
   return (
-    <a
-      href={p.selarLink}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to={`/product/${p.id}`}
       className="group flex flex-col rounded-2xl border border-white/10 bg-[#111] overflow-hidden
                  hover:border-[#F5C518]/50 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(245,197,24,0.08)]
                  transition-all duration-200 cursor-pointer"
@@ -86,7 +85,12 @@ export default function ProductCard({ product: p }: { product: Product }) {
             )}
           </div>
 
-          <span className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg
+          <a
+            href={p.selarLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg
                             transition-all duration-150
             ${p.free
               ? 'bg-[#F5C518] text-black group-hover:bg-yellow-300'
@@ -95,9 +99,9 @@ export default function ProductCard({ product: p }: { product: Product }) {
           >
             {p.free ? <Download size={11} /> : <ExternalLink size={11} />}
             {p.free ? 'Download' : 'Get This'}
-          </span>
+          </a>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
