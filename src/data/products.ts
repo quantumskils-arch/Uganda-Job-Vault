@@ -14,6 +14,26 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'remote-jobs-uganda-guide',
+    title: 'Legitimate Remote Jobs Uganda Guide 2026 — Online Work Paying via Mobile Money',
+    description: 'Stop getting scammed. Start getting paid. The only guide built specifically for Ugandans who want to earn real income online — paid directly to MTN MoMo or Airtel Money. Covers 7 scam red flags, 15+ legitimate platforms, and step-by-step setup guides.',
+    price: 'UGX 18,000',
+    priceUSD: '$5',
+    selarLink: 'https://selar.com/27959m1l55',
+    category: 'interview',
+    badge: '🔥 NEW',
+    coverImage: '/covers/remote-jobs-uganda-guide.png',
+    whatsInside: [
+      '7 scam red flags every Ugandan must know — spot them in 60 seconds',
+      '15+ legitimate platforms paying via MTN MoMo & Airtel Money',
+      'Step-by-step setup guides for each platform',
+      '100% remote — work from anywhere in Uganda',
+      'Real income opportunities with flexible hours',
+      'How to get paid in UGX directly to mobile money',
+      'Trusted opportunities verified for Uganda 2026',
+    ],
+  },
+  {
     id: 'centenary-bank-pack',
     title: 'Centenary Bank Uganda Complete Preparation Pack 2026',
     description: 'The most complete Centenary Bank preparation guide available. 80 practice questions + 30 interview answers covering numerical reasoning, verbal, situational judgement, bank knowledge, agricultural banking, and full interview Q&As with model answers.',
