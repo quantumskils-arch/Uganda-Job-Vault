@@ -14,6 +14,26 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'nssf-complete-pack',
+    title: 'NSSF Uganda Complete Preparation Pack 2026 — Aptitude Test + Interview Guide',
+    description: 'The most complete NSSF Uganda preparation guide available. 80 practice questions + 30 interview answers covering numerical reasoning, verbal, situational judgement, NSSF knowledge & values, and full interview Q&As with model answers.',
+    price: 'UGX 15,000',
+    priceUSD: '$4',
+    selarLink: 'https://selar.com/81l8pli127',
+    category: 'papers',
+    badge: '🔥 NEW',
+    coverImage: '/covers/nssf-complete-pack.png',
+    whatsInside: [
+      '25 numerical reasoning questions — contribution calculations & data',
+      '15 verbal reasoning questions — NSSF passages with answers',
+      '15 situational judgement — real NSSF customer service scenarios',
+      '25 NSSF knowledge & values questions with explanations',
+      '30 interview Q&As — knowledge, competency & STAR answers',
+      'NSSF benefits guide — all 5 benefit types explained',
+      'Exam day strategy + application guide + career path',
+    ],
+  },
+  {
     id: 'un-jobs-uganda-guide',
     title: 'UN Jobs Uganda — The Complete Insider Guide 2026 (UNDP · UNICEF · WFP · UNHCR · WHO)',
     description: 'The only guide in Uganda that tells you exactly how to get a UN job — step by step. 8 agency portals explained, real Uganda salary figures (UGX 3.5M–12M/month), UN CV & P11 form template, 50 competency interview Q&As with STAR answers, written test samples, UN Volunteer pathway, and a 30-day action plan.',
