@@ -14,6 +14,26 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'moh-jobs-guide',
+    title: 'Uganda Ministry of Health Jobs Guide 2026 — Complete Recruitment Preparation Guide',
+    description: 'The only complete preparation guide for Ministry of Health Uganda recruitment — covering every health cadre. Nurses, Clinical Officers, Lab Technicians, Midwives, Records Officers, and Admins. Covers HSC and PSC recruitment process end to end.',
+    price: 'UGX 18,000',
+    priceUSD: '$5',
+    selarLink: 'https://selar.com/5711nw7075',
+    category: 'interview',
+    badge: '🔥 NEW',
+    coverImage: '/covers/moh-jobs-guide.png',
+    whatsInside: [
+      'HSC vs PSC process explained — 15 job titles, salary scale U1-U7',
+      'Professional registration guide — UNMC, AHPC, UMDPC, Pharmacy Board',
+      '25 aptitude test questions — numerical, health policy, HMIS, malaria, UHC',
+      '20 core interview Q&As for ALL cadres — IPC, confidentiality, HMIS, UHC',
+      'Nurse/Midwife Q&As — PPH, EPI schedule, KMC, ANC danger signs',
+      'Clinical Officer Q&As — IMCI, malaria protocols, HIV Treat All, UCG',
+      'Document checklist + 8 disqualification reasons + key HSC/PSC contacts',
+    ],
+  },
+  {
     id: 'absa-bank-pack',
     title: 'Absa Bank Uganda Complete Preparation Pack 2026 — Aptitude Test + Interview Guide',
     description: 'The most complete Absa Bank Uganda preparation guide available. 80 practice questions + 30 interview answers covering numerical reasoning, verbal, situational judgement, Absa values, trade finance, and assessment centre strategy. Includes SHL test tips.',
