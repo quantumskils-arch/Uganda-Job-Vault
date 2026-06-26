@@ -14,6 +14,26 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'absa-bank-pack',
+    title: 'Absa Bank Uganda Complete Preparation Pack 2026 — Aptitude Test + Interview Guide',
+    description: 'The most complete Absa Bank Uganda preparation guide available. 80 practice questions + 30 interview answers covering numerical reasoning, verbal, situational judgement, Absa values, trade finance, and assessment centre strategy. Includes SHL test tips.',
+    price: 'UGX 15,000',
+    priceUSD: '$4',
+    selarLink: 'https://selar.com/356130m4k7',
+    category: 'papers',
+    badge: '🔥 NEW',
+    coverImage: '/covers/absa-bank-pack.png',
+    whatsInside: [
+      '25 numerical reasoning — compound interest, cost-to-income ratio, trade finance',
+      '15 verbal reasoning — Absa pan-African transformation & risk management passages',
+      '15 situational judgement — assessment centre, mis-selling, phishing, media handling',
+      '25 Absa knowledge questions — rebrand history, 4 values, AfCFTA, Graduate Programme',
+      '30 interview Q&As — knowledge, STAR competency & closing answers',
+      'SHL test tips + assessment centre strategy + thank-you email tip',
+      'Application guide + background check warning + career path to Country Director',
+    ],
+  },
+  {
     id: 'equity-bank-pack',
     title: 'Equity Bank Uganda Complete Preparation Pack 2026 — Aptitude Test + Interview Guide',
     description: 'The most complete Equity Bank Uganda preparation guide available. 80 practice questions + 30 interview answers covering numerical reasoning, verbal, situational judgement, Equity values, EazzyBanking knowledge, and full interview Q&As with model answers.',
