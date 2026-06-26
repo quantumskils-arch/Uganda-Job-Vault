@@ -14,6 +14,26 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'equity-bank-pack',
+    title: 'Equity Bank Uganda Complete Preparation Pack 2026 — Aptitude Test + Interview Guide',
+    description: 'The most complete Equity Bank Uganda preparation guide available. 80 practice questions + 30 interview answers covering numerical reasoning, verbal, situational judgement, Equity values, EazzyBanking knowledge, and full interview Q&As with model answers.',
+    price: 'UGX 15,000',
+    priceUSD: '$4',
+    selarLink: 'https://selar.com/877n8z0456',
+    category: 'papers',
+    badge: '🔥 NEW',
+    coverImage: '/covers/equity-bank-pack.png',
+    whatsInside: [
+      '25 numerical reasoning — loan repayments, forex, NPL ratios, compound interest',
+      '15 verbal reasoning — Equity Bank passages with answers',
+      '15 situational judgement — AML, vishing, credit pressure, till shortage',
+      '25 Equity Bank knowledge questions — values, EazzyBanking, *247#, BOU',
+      '30 interview Q&As — knowledge, competency & STAR answers',
+      'Equity products guide — EazzyBanking, Eazzypay, EazzyNet, EazzyBiz',
+      'Application guide + credit check warning + career path',
+    ],
+  },
+  {
     id: 'remote-jobs-uganda-guide',
     title: 'Legitimate Remote Jobs Uganda Guide 2026 — Online Work Paying via Mobile Money',
     description: 'Stop getting scammed. Start getting paid. The only guide built specifically for Ugandans who want to earn real income online — paid directly to MTN MoMo or Airtel Money. Covers 7 scam red flags, 15+ legitimate platforms, and step-by-step setup guides.',
