@@ -14,6 +14,27 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'un-jobs-uganda-guide',
+    title: 'UN Jobs Uganda — The Complete Insider Guide 2026 (UNDP · UNICEF · WFP · UNHCR · WHO)',
+    description: 'The only guide in Uganda that tells you exactly how to get a UN job — step by step. 8 agency portals explained, real Uganda salary figures (UGX 3.5M–12M/month), UN CV & P11 form template, 50 competency interview Q&As with STAR answers, written test samples, UN Volunteer pathway, and a 30-day action plan.',
+    price: 'UGX 28,000',
+    priceUSD: '$8',
+    selarLink: 'https://selar.com/i33gazy242',
+    category: 'interview',
+    badge: '🔥 NEW',
+    coverImage: '/covers/un-jobs-uganda-guide.png',
+    whatsInside: [
+      '8 UN agency portals — UNHCR, WFP, UNDP, UNICEF, WHO, IOM, FAO, UN Women',
+      'Real Uganda salary figures — NO-B earns UGX 7M–10M/month',
+      'UN CV & P11 form — exact format that gets shortlisted',
+      '50 competency interview Q&As with full STAR answers',
+      'Written test samples + 10 strategies to pass',
+      'UN Volunteer fast-track pathway for fresh graduates',
+      '30-day action plan — day by day',
+      '15 mistakes that kill applications — and how to avoid them',
+    ],
+  },
+  {
     id: 'aptitude-bundle',
     title: 'Aptitude Test Mastery Bundle 2026 — PSC + URA',
     description: 'Everything you need to pass the PSC and URA aptitude tests in one bundle. PSC pack (90 questions) + URA pack (200+ questions) + the bonus 14-Day Exam Sprint study plan. Save UGX 9,000.',
