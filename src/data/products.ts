@@ -14,6 +14,26 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'centenary-bank-pack',
+    title: 'Centenary Bank Uganda Complete Preparation Pack 2026',
+    description: 'The most complete Centenary Bank preparation guide available. 80 practice questions + 30 interview answers covering numerical reasoning, verbal, situational judgement, bank knowledge, agricultural banking, and full interview Q&As with model answers.',
+    price: 'UGX 15,000',
+    priceUSD: '$4',
+    selarLink: 'https://selar.com/1r33285134',
+    category: 'papers',
+    badge: '🔥 NEW',
+    coverImage: '/covers/centenary-bank-pack.png',
+    whatsInside: [
+      '25 numerical & financial reasoning — interest, loans, exchange rates',
+      '15 verbal reasoning — Centenary Bank passages with answers',
+      '15 situational judgement — AML, cash, agricultural loan scenarios',
+      '25 Centenary Bank knowledge questions — products, values, history',
+      '30 interview Q&As — knowledge, competency & STAR answers',
+      'CenteMobile, CenteAgent & agricultural banking guide',
+      'Application guide + credit check warning + career path',
+    ],
+  },
+  {
     id: 'nssf-complete-pack',
     title: 'NSSF Uganda Complete Preparation Pack 2026 — Aptitude Test + Interview Guide',
     description: 'The most complete NSSF Uganda preparation guide available. 80 practice questions + 30 interview answers covering numerical reasoning, verbal, situational judgement, NSSF knowledge & values, and full interview Q&As with model answers.',
