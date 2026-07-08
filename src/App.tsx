@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import Nav from './components/Nav';
 import UgandaPayeCalculator from './pages/tools/uganda-paye-calculator';
 import ProductDetail from './pages/ProductDetail';
+import Refund from './pages/Refund';
+import Privacy from './pages/Privacy';
 
 export type Page = 'home' | 'cv-generator' | 'cv-templates' | 'papers' | 'uganda-paye-calculator';
 
@@ -35,6 +37,8 @@ function App() {
         </>
       } />
       <Route path="/product/:id" element={<ProductDetail />} />
+      <Route path="/refund" element={<Refund />} />
+      <Route path="/privacy" element={<Privacy />} />
     </Routes>
   );
 }
