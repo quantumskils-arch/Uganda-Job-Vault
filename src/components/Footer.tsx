@@ -33,6 +33,8 @@ export default function Footer({ navigate }: FooterProps) {
                 <li><button onClick={() => navigate('papers')} className="text-white/60 hover:text-white transition-colors">Past Papers</button></li>
                 <li><button onClick={() => navigate('cv-templates')} className="text-white/60 hover:text-white transition-colors">CV Templates</button></li>
                 <li><button onClick={() => navigate('cv-generator')} className="text-white/60 hover:text-white transition-colors">AI CV Generator</button></li>
+                <li><button onClick={() => navigate('tools')} className="text-white/60 hover:text-white transition-colors">Tools & Resources</button></li>
+                <li><button onClick={() => navigate('blog')} className="text-white/60 hover:text-white transition-colors">Blog</button></li>
                 <li><a href={JOB_VAULT_STORE} target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition-colors">Full Store</a></li>
               </ul>
             </div>

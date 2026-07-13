@@ -1,6 +1,6 @@
 import { Page } from '../App';
-import { Calculator } from 'lucide-react';
-import { BookOpen, FileText, Zap, Menu, X } from 'lucide-react';
+import { Calculator, Wrench } from 'lucide-react';
+import { BookOpen, FileText, Zap, Menu, X, PenLine } from 'lucide-react';
 import { useState } from 'react';
 
 interface NavProps {
@@ -15,6 +15,8 @@ export default function Nav({ page, navigate }: NavProps) {
     { label: 'Past Papers', page: 'papers', icon: <BookOpen size={15} /> },
     { label: 'CV Templates', page: 'cv-templates', icon: <FileText size={15} /> },
     { label: 'PAYE Calculator', page: 'uganda-paye-calculator', icon: <Calculator size={15} /> },
+    { label: 'Tools', page: 'tools', icon: <Wrench size={15} /> },
+    { label: 'Blog', page: 'blog', icon: <PenLine size={15} /> },
   ];
 
   return (
