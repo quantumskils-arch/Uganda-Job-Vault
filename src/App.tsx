@@ -14,6 +14,10 @@ import ProductDetail from './pages/ProductDetail';
 import BlogLayout from './pages/blog/BlogLayout';
 import BlogList from './pages/blog/BlogList';
 import BlogPostPage from './pages/blog/BlogPost';
+import Terms from './pages/Terms';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import CookieBanner from './components/CookieBanner';
 
 export type Page = 'home' | 'cv-generator' | 'cv-templates' | 'papers' | 'uganda-paye-calculator' | 'tools' | 'blog';
 
@@ -31,27 +35,33 @@ function App() {
   };
 
   return (
-    <Routes>
-      <Route path="/" element={
-        <>
-          <Nav page={page} navigate={navigate} />
-          <main>
-            {page === 'home' && <Landing navigate={navigate} />}
-            {page === 'cv-generator' && <CVGenerator />}
-            {page === 'cv-templates' && <CVTemplates />}
-            {page === 'papers' && <Papers />}
-            {page === 'uganda-paye-calculator' && <UgandaPayeCalculator />}
-            {page === 'tools' && <Tools />}
-          </main>
-          <Footer navigate={navigate} />
-        </>
-      } />
-      <Route path="/product/:id" element={<ProductDetail />} />
-      <Route path="/refund" element={<Refund />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/blog" element={<BlogLayout><BlogList /></BlogLayout>} />
-      <Route path="/blog/:slug" element={<BlogLayout><BlogPostPage /></BlogLayout>} />
-    </Routes>
+    <>
+      <CookieBanner />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Nav page={page} navigate={navigate} />
+            <main>
+              {page === 'home' && <Landing navigate={navigate} />}
+              {page === 'cv-generator' && <CVGenerator />}
+              {page === 'cv-templates' && <CVTemplates />}
+              {page === 'papers' && <Papers />}
+              {page === 'uganda-paye-calculator' && <UgandaPayeCalculator />}
+              {page === 'tools' && <Tools />}
+            </main>
+            <Footer navigate={navigate} />
+          </>
+        } />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/refund" element={<Refund />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<BlogLayout><BlogList /></BlogLayout>} />
+        <Route path="/blog/:slug" element={<BlogLayout><BlogPostPage /></BlogLayout>} />
+      </Routes>
+    </>
   );
 }
 

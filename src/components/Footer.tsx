@@ -52,10 +52,16 @@ export default function Footer({ navigate }: FooterProps) {
 
         <div className="border-t border-white/5 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-white/20 text-xs">
           <span>&copy; 2026 UgandaJobVault &middot; Kampala, Uganda</span>
-          <span>
+          <span className="flex flex-wrap items-center gap-x-2">
+            <a href="/about" className="text-white/40 hover:text-white/60 transition-colors">About</a>
+            <span className="text-white/20">·</span>
+            <a href="/contact" className="text-white/40 hover:text-white/60 transition-colors">Contact</a>
+            <span className="text-white/20">·</span>
             <a href="/refund" className="text-white/40 hover:text-white/60 transition-colors">Refund Policy</a>
-            <span className="mx-2">·</span>
+            <span className="text-white/20">·</span>
             <a href="/privacy" className="text-white/40 hover:text-white/60 transition-colors">Privacy Policy</a>
+            <span className="text-white/20">·</span>
+            <a href="/terms" className="text-white/40 hover:text-white/60 transition-colors">Terms of Service</a>
           </span>
         </div>
       </div>
