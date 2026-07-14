@@ -4,7 +4,49 @@
     <loc>https://ugandajobvault.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ugandajobvault.vercel.app/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ugandajobvault.vercel.app/blog/5-free-tools-ugandan-job-seekers-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://ugandajobvault.vercel.app/blog/cv-that-passes-ats-uganda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+  <url>
+    <loc>https://ugandajobvault.vercel.app/blog/government-interview-questions-uganda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://ugandajobvault.vercel.app/blog/ura-aptitude-test-preparation-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-11</lastmod>
+  </url>
+  <url>
+    <loc>https://ugandajobvault.vercel.app/blog/ngo-jobs-uganda-how-to-stand-out</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://ugandajobvault.vercel.app/blog/freelancing-uganda-platforms-tips-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-09</lastmod>
   </url>
   <url>
     <loc>https://ugandajobvault.vercel.app/product/aptitude-bundle</loc>
