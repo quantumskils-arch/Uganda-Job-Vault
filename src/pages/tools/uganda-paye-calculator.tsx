@@ -21,22 +21,22 @@ export default function UgandaPayeCalculator() {
     const NSSF_EMPLOYEE_RATE = 0.05;
     const NSSF_EMPLOYER_RATE = 0.10;
 
-    // URA monthly resident PAYE schedule (in effect June 2026)
-    // 0 – 235,000:        0%
-    // 235,001 – 335,000:  10% of amount over 235,000          → max 10,000
-    // 335,001 – 410,000:  10,000 + 20% of amount over 335,000 → max 25,000
-    // 410,001 – 10M:      25,000 + 30% of amount over 410,000
+    // 2026/2027 URA monthly resident PAYE schedule (effective July 1, 2026)
+    // 0 – 335,000:        0%
+    // 335,001 – 410,000:  20% of amount over 335,000          → max 15,000
+    // 410,001 – 485,000:  15,000 + 25% of amount over 410,000 → max 33,750
+    // 485,001 – 10M:      33,750 + 30% of amount over 485,000
     // Above 10M:          as above + 10% surtax on amount over 10,000,000
     let payeTax = 0;
     if (grossSalary > 10000000) {
-      // 2,902,000 = tax at the 10M ceiling = 25,000 + 30% × (10,000,000 − 410,000)
-      payeTax = 2902000 + (grossSalary - 10000000) * 0.10;
+      // 2,888,250 = tax at the 10M ceiling = 33,750 + 30% × (10,000,000 − 485,000)
+      payeTax = 2888250 + (grossSalary - 10000000) * 0.10;
+    } else if (grossSalary > 485000) {
+      payeTax = 33750 + (grossSalary - 485000) * 0.30;
     } else if (grossSalary > 410000) {
-      payeTax = 25000 + (grossSalary - 410000) * 0.30;
+      payeTax = 15000 + (grossSalary - 410000) * 0.25;
     } else if (grossSalary > 335000) {
-      payeTax = 10000 + (grossSalary - 335000) * 0.20;
-    } else if (grossSalary > 235000) {
-      payeTax = (grossSalary - 235000) * 0.10;
+      payeTax = (grossSalary - 335000) * 0.20;
     }
 
     const nssfEmployeeDeduction = grossSalary * NSSF_EMPLOYEE_RATE;
