@@ -41,7 +41,7 @@ export default function Landing({ navigate }: LandingProps) {
         <div className="relative max-w-6xl mx-auto px-4 py-20 text-center">
           <div className="inline-flex items-center gap-2 border border-[#F5C518]/30 bg-[#F5C518]/5 rounded-full px-4 py-1.5 text-sm text-[#F5C518] mb-8">
             <span className="w-2 h-2 bg-[#F5C518] rounded-full animate-pulse" />
-            Uganda's #1 Career Prep Platform
+            Uganda Career Prep Platform
           </div>
 
           <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95] tracking-tight mb-6">
@@ -71,11 +71,10 @@ export default function Landing({ navigate }: LandingProps) {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto">
+          <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
             {[
-              { val: '2,400+', label: 'Job Seekers Helped' },
-              { val: '50+', label: 'Past Paper Sets' },
-              { val: '4.9★', label: 'Average Rating' },
+              { val: '20+', label: 'Preparation Guides' },
+              { val: '9+', label: 'Past Paper Sets' },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <div className="text-2xl font-black text-[#F5C518]">{s.val}</div>
