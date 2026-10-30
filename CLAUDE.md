@@ -155,3 +155,20 @@ Reusable. CSS variables (`--ink`, `--gold`, `--paper`, `--tint`) at the top. To 
    - [ ] Commit content file only — `output/*.pdf` is gitignored
 4. Stage specific files by name — never `git add .` (avoids accidentally staging `.env`, large binaries, or `pdf-builder/output/`).
 5. SSH remote — no personal access token needed for push.
+
+---
+
+## 2026-10-30 — Selar Alignment Fixes
+
+**Deployed:** https://uganda-job-vault.vercel.app (commit `59b5dc2`)
+
+### Fixed
+1. **Removed `civil-service-aptitude`** — its Selar link (`selar.com/pg741e431g`) pointed to OpportunityRadar Premium (wrong product). Product not on Selar.
+2. **Synced prices:** `aptitude-bundle` UGX 24,000 → UGX 22,000; `govt-jobs-bundle` UGX 36,000 → UGX 33,000
+3. **Added AI Prompt Library** (downloadable, UGX 15,000, `selar.com/jeq5a81k55`) — not an MCP/subscription, safe to add
+4. **Removed unverifiable claims:** "Uganda's #1" badge → "Uganda Career Prep Platform"; removed "2,400+", "4.9★" stats; changed "50+" → "9+" past paper sets
+5. **Fixed index.html:** title removed "AI CV Generator", meta description removed "#1", og:description removed "AI CV Generator"
+
+### Deferred (need opportunityradar.africa check first)
+- MCP/subscription products on Selar but not on site: Africa Intelligence MCP, Africa Procurement Intelligence MCP, OpportunityRadar Data MCP, African Fintech MCP, MoMo Parser MCP, Eligibility MCP, OpportunityRadar Premium
+- These require checking opportunityradar.africa + quantum server before deciding whether to add to site
